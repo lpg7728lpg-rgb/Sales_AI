@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus AI - Sales Intelligence</title>
+    <meta name="description" content="AI-powered Sales Intelligence Web App">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo-box">
+                    <i class="ph-fill ph-target logo-icon"></i>
+                </div>
+                <h2>Nexus AI</h2>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <button class="nav-item active" data-view="dashboard">
+                    <i class="ph ph-squares-four"></i> <span>Dashboard</span>
+                </button>
+                <button class="nav-item" data-view="prospects">
+                    <i class="ph ph-users"></i> <span>Prospects</span>
+                </button>
+                <button class="nav-item" data-view="deals">
+                    <i class="ph ph-handshake"></i> <span>Deals</span>
+                    <span class="badge badge-error badge-small">2 At Risk</span>
+                </button>
+                <button class="nav-item" data-view="recovery">
+                    <i class="ph ph-chart-line-down"></i> <span>Recovery</span>
+                    <span class="badge badge-warning badge-small">3 Alerts</span>
+                </button>
+                <button class="nav-item" data-view="insights">
+                    <i class="ph ph-lightbulb"></i> <span>Insights</span>
+                </button>
+                
+                <div class="nav-divider"></div>
+                
+                <button class="nav-item ai-nav-item" data-view="assistant">
+                    <i class="ph ph-sparkle"></i> <span>AI Assistant</span>
+                </button>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <button id="theme-toggle" class="nav-item">
+                    <i class="ph ph-sun" id="theme-icon"></i> <span>Toggle Theme</span>
+                </button>
+                <div class="user-profile">
+                    <img src="https://ui-avatars.com/api/?name=Alex+S&background=2563eb&color=fff&rounded=true" alt="Alex S">
+                    <div class="user-info">
+                        <span class="name">Alex S.</span>
+                        <span class="role">Sales VP</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="topbar">
+                <div class="topbar-left">
+                    <h1 id="page-title">Dashboard</h1>
+                    <p id="page-subtitle" class="subtitle">Welcome back, Alex. Here's what's happening today.</p>
+                </div>
+                <div class="topbar-actions">
+                    <div class="search-box">
+                        <i class="ph ph-magnifying-glass"></i>
+                        <input type="text" placeholder="Search deals, prospects...">
+                    </div>
+                    <button class="btn btn-icon"><i class="ph ph-bell"></i></button>
+                    <button class="btn btn-primary"><i class="ph ph-plus"></i> New Deal</button>
+                </div>
+            </header>
+            
+            <div id="view-container" class="view-container">
+                <!-- Dynamically injected views -->
+                <div class="loader-container" id="main-loader"><div class="spinner"></div></div>
+            </div>
+        </main>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
