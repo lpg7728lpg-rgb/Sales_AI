@@ -109,6 +109,7 @@ We built an **AI-powered Sales Intelligence Agent** that integrates with CRM-lik
 ---
 
 ## 🛠️ Installation / Usage
+tap on the link: https://lpg7728lpg-rgb.github.io/Sales_AI/
 
 ```bash
 # Clone repository
